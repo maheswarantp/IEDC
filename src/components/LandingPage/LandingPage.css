@@ -1,0 +1,66 @@
+#tsparticles canvas {
+    background-color: black;
+    background-image: url('wallpaper_3.jpeg');
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+/* ---- reset ---- */
+.github {
+    bottom: 10px;
+    right: 10px;
+    position: fixed;
+    border-radius: 10px;
+    background: #fff;
+    padding: 0 12px 6px 12px;
+    border: 1px solid #000;
+  }
+  
+  .github a:hover,
+  .github a:link,
+  .github a:visited,
+  .github a:active {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .github img {
+    height: 30px;
+  }
+  
+  .github #gh-project {
+    font-size: 20px;
+    padding-left: 5px;
+    font-weight: bold;
+    vertical-align: bottom;
+  }
+  
+
+
+.button-register {
+    border-color: white;
+}
+
+#inner {
+    animation: scrolltriggeranim 1s ease-in 0s infinite normal forwards;
+}
+@keyframes scrolltriggeranim {
+    0% {
+        transform: translateY(0);
+    }
+    90% {
+        transform: translateY(20px);
+    }
+    100% {
+        animation-timing-function: linear;
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #tsparticles canvas {
+        background-size: contain;
+    }
+}

@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { loadFull } from 'tsparticles';
+
+import NavBar from './components/NavBar/NavBar'
+import LandingPage from './components/LandingPage/LandingPage';
+import About from './components/About/About';
+import Events from './components/Events/Events'
+import Execom from './components/Execom/Execom'
+import Footer from './components/Footer/Footer'
+
 
 function App() {
+  const particlesInit = async(main) => await loadFull(main)
+  const particlesLoaded =  () => console.log('loaded particles')
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <LandingPage particlesInit={particlesInit} particlesLoaded={particlesLoaded}/>
+      <About />
+      <Events />
+      <Execom />
+      <Footer />
     </div>
   );
 }

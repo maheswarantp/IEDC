@@ -1,0 +1,5 @@
+.navbar {
+    /* background-color: red; */
+    position: relative;
+    z-index: 99999;
+}
